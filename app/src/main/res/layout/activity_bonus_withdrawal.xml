@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.BonusWithdrawalActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_135"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_27"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginBottom="@dimen/size_21"
+        android:background="@drawable/shape_bonus_withdrawal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="待提现"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_bonus_withdrawal_money"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_35"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_50"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="¥ 0"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginBottom="@dimen/size_15"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="注：提现过程代扣6%税费，该提现和打卡返钱无关"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_bonus_withdrawal_get"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_38"
+            android:layout_marginRight="@dimen/size_20"
+            android:background="@drawable/selector_withdrawal_button"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="提现"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </RelativeLayout>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/indicator_activity_bonus_withdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+    </net.lucode.hackware.magicindicator.MagicIndicator>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_activity_bonus_withdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

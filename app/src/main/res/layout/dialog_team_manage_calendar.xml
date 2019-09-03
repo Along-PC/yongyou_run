@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_20"
+        android:background="@drawable/shape_date_back">
+
+        <RelativeLayout
+            android:id="@+id/rl_dialog_team_manage_calendar_last"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30">
+
+            <ImageView
+                android:id="@+id/img_dialog_team_manage_calendar_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_triangle_left"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_dialog_team_manage_calendar_current"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="----年--月"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <RelativeLayout
+            android:id="@+id/rl_dialog_team_manage_calendar_next"
+            android:layout_marginRight="@dimen/size_5"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30">
+
+            <ImageView
+                android:id="@+id/img_dialog_team_manage_calendar_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_triangle_right"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40">
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="日"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="三"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="四"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="五"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="六"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_dialog_team_manage_calendar_month"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

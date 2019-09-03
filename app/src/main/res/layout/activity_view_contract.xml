@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.ViewContractActivity">
+
+    <ScrollView
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_activity_view_contract"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_67">
+
+        <CheckBox
+            android:id="@+id/cb_activity_view_contract_protocol"
+            android:layout_marginRight="@dimen/size_12"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_activity_view_contract_protocol"
+            android:text="@string/digital_protocal"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/color_font_black"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_activity_view_contract_submit"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_15"
+        android:text="我已同意上述合同并签署"
+        android:gravity="center"
+        android:background="@drawable/shape_create_dynamic_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46" />
+
+</LinearLayout>

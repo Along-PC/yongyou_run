@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_white"
+    android:layout_marginBottom="@dimen/size_10"
+    android:layout_height="@dimen/size_202">
+
+    <TextView
+        android:text="订单状态："
+        style="@style/commonFont"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20" />
+
+    <TextView
+        android:id="@+id/tv_item_activity_logistics_status"
+        android:text="待发货"
+        style="@style/commonFont"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_20" />
+
+    <View
+        android:background="@color/color_line"
+        android:layout_marginTop="@dimen/size_40"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/size_41"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_116">
+
+        <ImageView
+            android:id="@+id/img_item_activity_logistics_photo"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/size_96"
+            android:layout_height="@dimen/size_96" />
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/img_item_activity_logistics_photo"
+            android:layout_marginLeft="@dimen/size_4"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item_activity_logistics_goods_name"
+                android:text="成功组队满10人-鸿星尔克百日跑联名T恤成功组队满10人-鸿星尔克百日跑联名T恤"
+                style="@style/commonFont"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="@dimen/size_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_item_activity_logistics_goods_size"
+                android:text="灰色 XL"
+                android:textColor="@color/color_font_gray_lite"
+                android:gravity="center"
+                android:textSize="@dimen/font_12"
+                android:layout_below="@+id/tv_item_activity_logistics_goods_name"
+                android:background="@drawable/shape_logistics_goods_size"
+                android:layout_width="@dimen/size_70"
+                android:layout_height="@dimen/size_20" />
+
+            <TextView
+                android:id="@+id/tv_item_activity_logistics_goods_count"
+                android:text="x1"
+                android:textSize="@dimen/font_14"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_font_gray_lite"
+                android:layout_below="@+id/tv_item_activity_logistics_goods_name"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/color_line"
+        android:layout_marginBottom="@dimen/size_46"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_item_activity_logistics_sale_service"
+            android:textColor="@color/color_red"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/tv_item_activity_logistics_view_logistics"
+            android:text="售后服务"
+            android:background="@drawable/shape_border_red"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_9"
+            android:textSize="@dimen/font_14"
+            android:layout_width="@dimen/size_76"
+            android:layout_height="@dimen/size_26" />
+
+        <TextView
+            android:id="@+id/tv_item_activity_logistics_view_logistics"
+            android:textColor="@color/color_red"
+            android:gravity="center"
+            android:text="查看物流"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_border_red"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_9"
+            android:textSize="@dimen/font_14"
+            android:layout_width="@dimen/size_76"
+            android:layout_height="@dimen/size_26" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

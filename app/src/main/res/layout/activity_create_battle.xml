@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.home.CreateBattleActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size_46"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingTop="@dimen/size_20"
+            android:paddingRight="@dimen/size_14">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_72"
+                android:layout_marginBottom="@dimen/size_20">
+
+                <TextView
+                    style="@style/blackFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="上传战队头像"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/size_72"
+                    android:layout_height="@dimen/size_72">
+
+                    <ImageView
+                        android:background="@drawable/shape_qrcode_select_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_add_picture"
+                        android:layout_width="@dimen/size_22"
+                        android:layout_height="@dimen/size_22" />
+
+                    <ImageView
+                        android:id="@+id/img_activity_create_battle_head"
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/size_72"
+                        android:layout_height="@dimen/size_72" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/blackFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_4"
+                android:text="战队名称"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_activity_create_battle_name"
+                style="@style/PersonInfoContent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginBottom="@dimen/size_20"
+                android:hint="请输入战队名称（不超过16个字）"
+                android:maxLength="16" />
+
+            <TextView
+                style="@style/blackFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_4"
+                android:text="队员招募地区"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_activity_create_battle_region"
+                style="@style/PersonInfoContent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginBottom="@dimen/size_20"
+                android:hint="请选择"/>
+
+            <TextView
+                style="@style/blackFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_4"
+                android:text="日打卡目标"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_activity_create_battle_group"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginBottom="@dimen/size_10">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                style="@style/blackFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_4"
+                android:text="队伍介绍"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_150"
+                android:layout_marginBottom="@dimen/size_20"
+                android:background="@drawable/shape_create_battle_intro">
+
+                <EditText
+                    android:id="@+id/edt_activity_create_battle_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_100"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入队伍或个人介绍，该内容将出现在招募海报上。比如：队长是中国红十字会急救员，百公里挑战者，健康跑团团长，骑行爱好者，越野赛事挑战者。期待和大家一起到茶马古道走最远的路，看最美的风景。"
+                    android:maxLength="140"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tv_activity_create_battle_contentNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:text="0/140"
+                    android:textColor="@color/color_font_gray_lite"
+                    android:textSize="@dimen/font_12" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_4">
+
+                <TextView
+                    style="@style/blackFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_marginRight="@dimen/size_4"
+                    android:text="添加二维码"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="(关闭页面时，已填信息不会丢失)"
+                    android:textColor="#FFCCCCCC"
+                    android:textSize="@dimen/font_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_20">
+
+                <LinearLayout
+                    android:layout_width="@dimen/size_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_20"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_create_battle_battle_qrcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_164">
+
+                        <ImageView
+                            android:background="@drawable/shape_qrcode_select_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/size_10" />
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/icon_add_picture"
+                            android:layout_width="@dimen/size_28"
+                            android:layout_height="@dimen/size_28" />
+
+                        <ImageView
+                            android:id="@+id/img_activity_create_battle_battle_qrcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:layout_marginBottom="@dimen/size_10"/>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_below="@+id/img_activity_create_battle_battle_qrcode"
+                        style="@style/blackFont"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/size_20"
+                        android:text="添加战队群二维码"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/size_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_create_battle_leader_qrcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_164">
+
+                        <ImageView
+                            android:background="@drawable/shape_qrcode_select_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/size_10" />
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/icon_add_picture"
+                            android:layout_width="@dimen/size_28"
+                            android:layout_height="@dimen/size_28" />
+
+                        <ImageView
+                            android:id="@+id/img_activity_create_battle_leader_qrcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:layout_marginBottom="@dimen/size_10" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/blackFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_20"
+                        android:layout_gravity="center_horizontal"
+                        android:text="添加队长二维码"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/blackFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_4"
+                android:text="战队相册"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:layout_marginBottom="@dimen/size_10"
+                android:text="展示你战队精神面貌的图片，能吸引更多人报名，战队创建后也可修改。"
+                android:textColor="#FFCCCCCC"
+                android:textSize="@dimen/font_14" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_activity_create_battle_album"
+                android:layout_marginBottom="@dimen/size_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_activity_create_battle_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_create_dynamic_submit"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16" />
+
+</RelativeLayout>

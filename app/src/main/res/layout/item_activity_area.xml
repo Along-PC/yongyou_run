@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_activity_area_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_40">
+
+    <TextView
+        android:id="@+id/tv_item_activity_area_country"
+        android:textColor="@color/color_font_black"
+        android:textSize="@dimen/font_18"
+        android:text="中国"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_item_activity_area_code"
+        android:textColor="@color/color_font_black"
+        android:textSize="@dimen/font_18"
+        android:text="+86"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/size_10"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/size_8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_36">
+
+        <ImageView
+            android:id="@+id/img_team_detail_dynamic_head"
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36" />
+
+        <TextView
+            android:id="@+id/tv_team_detail_dynamic_name"
+            android:text="- - -"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginLeft="@dimen/size_8"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/color_font_dynamic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_team_detail_dynamic_content"
+        android:text="斯皮尔伯格把他对电影的梦想、热心、爱与情怀，浓缩到这部片子，通过极具年代感的经典电影和角色，又并茂高科技的现代游戏闯关，他拿手的、专注的、想诉说的都在这里给影迷情倾盆呈现。"
+        android:textColor="@color/color_font_dynamic_name"
+        android:textSize="@dimen/font_14"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.tourye.run.views.NineImageView
+        android:id="@+id/nine_team_detail_dynamic_images"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0">
+
+    </com.tourye.run.views.NineImageView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tourye.run.ui.activities.mine.EditInformationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_activity_edit_infor_head"
+            android:layout_width="@dimen/size_70"
+            android:layout_height="@dimen/size_70"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_marginTop="@dimen/size_60"
+            android:background="@drawable/icon_head" />
+
+        <TextView
+            android:id="@+id/tv_activity_edit_infor_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_activity_edit_infor_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size_60"
+            android:text="上传头像"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_activity_edit_infor_name"
+            android:layout_width="@dimen/size_200"
+            android:layout_height="@dimen/size_42"
+            android:layout_below="@+id/tv_activity_edit_infor_head"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingRight="@dimen/size_10"
+            android:hint="请输入你的昵称"
+            android:maxLength="10"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/size_10"
+            android:background="@drawable/shape_edit_information_name"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tv_activity_edit_infor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_activity_edit_infor_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size_60"
+            android:text="编辑昵称"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_activity_edit_information_skip"
+            android:text="跳过››"
+            android:textColor="#FFCC1C24"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <com.amap.api.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps.MapView>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/color_white"
+    android:layout_height="match_parent">
+
+    <View
+        android:background="@color/color_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_battle_ranking_group"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+        <TextView
+            android:id="@+id/tv_fragment_battle_ranking_group"
+            android:layout_gravity="center_vertical"
+            android:text="-KM组别榜单"
+            android:layout_weight="1"
+            style="@style/smallFont"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_fragment_battle_ranking_choose"
+            android:text="选择组别"
+            android:textSize="@dimen/font_12"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_font_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/color_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout_battle_ranking_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_fragment_battle_ranking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

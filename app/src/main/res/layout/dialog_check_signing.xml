@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_290">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@drawable/shape_dialog_check_signing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="查询并提现奖金\n须先签署电子合同确认身份"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/color_font_black"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/size_76"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_44" />
+        
+        <TextView
+            android:id="@+id/tv_dialog_check_signing_certain"
+            android:background="@drawable/shape_check_signing_button"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_white"
+            android:text="签署"
+            android:textSize="@dimen/font_16"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_66"
+            android:layout_width="@dimen/size_268"
+            android:layout_height="@dimen/size_45" />
+
+        <TextView
+            android:id="@+id/tv_dialog_check_signing_cancel"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_font_black"
+            android:text="暂不提现"
+            android:textSize="@dimen/font_16"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_width="@dimen/size_268"
+            android:layout_height="@dimen/size_45" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/icon_signing"
+        android:layout_width="@dimen/size_64"
+        android:layout_height="@dimen/size_64" />
+
+</RelativeLayout>

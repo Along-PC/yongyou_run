@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_item_community_detail_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_14"
+        android:layout_marginBottom="@dimen/size_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_community_detail_comment_head"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/shape_community_detail_comment_head"
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36" />
+
+        <TextView
+            android:id="@+id/tv_community_detail_comment_name"
+            android:text="---"
+            android:textSize="@dimen/font_14"
+            android:textColor="#FF000000"
+            android:layout_toRightOf="@+id/img_community_detail_comment_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_community_detail_comment_time"
+            android:text="-分钟前"
+            android:textSize="@dimen/font_14"
+            android:layout_toRightOf="@+id/img_community_detail_comment_head"
+            android:layout_below="@+id/tv_community_detail_comment_name"
+            android:textColor="#FF999999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_community_detail_comment_submit"
+            android:background="@drawable/icon_message"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_community_detail_comment_message"
+        android:text="斯皮尔伯格把他对电影的梦想、热心、爱与情怀，浓缩到这部片子，通过极具年代感的经典电影和角色，又并茂高科技的现代游戏闯关，他拿手的、专注的、想诉说的都在这里给影迷情倾盆呈现"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/font_16"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginRight="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_community_detail_reply"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginRight="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_20"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size_8"
+        android:paddingBottom="@dimen/size_10"
+        android:background="#FFF2F2F2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_community_detail_comment"
+            android:divider="@null"
+            android:nestedScrollingEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_community_detail_comment_expand"
+            android:text="共-条回复>"
+            android:textSize="@dimen/font_16"
+            android:paddingLeft="@dimen/size_10"
+            android:textColor="#FF4A90E2"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_22" />
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/color_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+</LinearLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_95">
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_share_wechat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_wx" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="微信好友"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_share_wechat_moment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_moments" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="朋友圈"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_dialog_share_qq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_qq" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="QQ好友"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_dialog_share_qq_zone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_kj" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="QQ空间"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_dialog_share_sina"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_wb" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="微博"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/color_font_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_share"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_95">
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_share_download"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_download" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="下载图片"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_qq" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="QQ好友"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_kj" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="QQ空间"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_42"
+                android:layout_height="@dimen/size_42"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_6"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/icon_share_wb" />
+
+            <TextView
+                android:textColor="@color/color_font_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="微博"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dialog_share_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_48"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_font_gray"
+        android:textSize="@dimen/font_16" />
+
+</LinearLayout>

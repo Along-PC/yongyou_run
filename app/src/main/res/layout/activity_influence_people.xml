@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.InfluencePeopleActivity">
+
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/indicator_activity_influence_people"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+
+    </net.lucode.hackware.magicindicator.MagicIndicator>
+
+    <View
+        android:background="@color/color_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_activity_influence_people"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

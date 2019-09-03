@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_signup_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginLeft="@dimen/size_12"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_12"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/shape_signup_search_back"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_14"
+            android:layout_height="@dimen/size_14"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_marginRight="@dimen/size_6"
+            android:background="@drawable/icon_search" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_30"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="搜索城市或战队名称"
+            android:textColorHint="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <com.tourye.run.views.MyScrollview
+        android:id="@+id/scroll_fragment_signup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size_50"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_fragment_signup_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_14"
+                android:layout_marginBottom="@dimen/size_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="距离报名截止："
+                    android:textColor="@color/color_font_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_signup_countdown_days"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_font_black"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_12" />
+
+                <TextView
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="天"
+                    android:textSize="@dimen/font_10" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_signup_countdown_hours"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_font_black"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_12" />
+
+                <TextView
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="时"
+                    android:textSize="@dimen/font_10" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_signup_countdown_minutes"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_font_black"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_12" />
+
+                <TextView
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="分"
+                    android:textSize="@dimen/font_10" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_signup_countdown_seconds"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_font_black"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_12" />
+
+                <TextView
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="秒"
+                    android:textSize="@dimen/font_10" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_159">
+
+                <ImageView
+                    android:id="@+id/img_fragment_signup_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:background="@drawable/shape_signup_count"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/size_14"
+                    android:paddingRight="@dimen/size_14"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginLeft="@dimen/size_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_gravity="center_vertical"
+                        android:text="当前报名"
+                        android:gravity="bottom"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        android:id="@+id/tv_fragment_signup_count"
+                        android:includeFontPadding="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_gravity="center_vertical"
+                        android:text="- -"
+                        android:layout_marginLeft="@dimen/size_2"
+                        android:layout_marginRight="@dimen/size_2"
+                        android:gravity="bottom"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_gravity="center_vertical"
+                        android:text="人"
+                        android:gravity="bottom"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_14" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_91">
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_signup_graduation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_fragment_signup_graduation"
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:background="@drawable/icon_run_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="毕业跑"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_signup_rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_fragment_signup_rule"
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:background="@drawable/icon_rule" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="规则"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_signup_leader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_fragment_signup_leader"
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:background="@drawable/icon_leader" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="队长"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_signup_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_fragment_signup_ranking"
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:background="@drawable/icon_ranking" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="排行"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_signup_kit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_fragment_signup_kit"
+                        android:layout_width="@dimen/size_50"
+                        android:layout_height="@dimen/size_50"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:background="@drawable/icon_kit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="锦囊"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="#FFFAFAFA" />
+
+            <com.tourye.run.views.AdvertiseView
+                android:id="@+id/ll_signup_battle_report"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60">
+
+                <ImageView
+                    android:layout_width="@dimen/size_38"
+                    android:layout_height="@dimen/size_38"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/size_18"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:background="@drawable/icon_new_battle_report" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_fragment_signup_battleReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:layout_weight="1">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <ImageView
+                    android:id="@+id/img_fragment_signup_battleReport"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_24"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:background="@drawable/icon_arrow_right" />
+
+            </com.tourye.run.views.AdvertiseView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="#FFFAFAFA" />
+
+            <LinearLayout
+                android:id="@+id/ll_signup_own_battle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_22"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginTop="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_10">
+
+                    <TextView
+                        style="@style/commonFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="所在战队"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_signup_own_battle_punchTime"
+                        style="@style/commonFont"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="- 月 -- 日开始打卡"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:translationZ="@dimen/size_2"
+                    app:cardElevation="@dimen/size_2">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_fragment_signup_own_battle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_92">
+
+                        <ImageView
+                            android:id="@+id/img_fragment_signup_own_battle"
+                            android:layout_width="@dimen/size_72"
+                            android:layout_height="@dimen/size_72"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/size_14"
+                            android:layout_marginRight="@dimen/size_10" />
+
+                        <TextView
+                            android:id="@+id/tv_fragment_signup_own_battle_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_20"
+                            android:layout_marginTop="@dimen/size_10"
+                            android:layout_marginRight="@dimen/size_14"
+                            android:layout_marginBottom="@dimen/size_5"
+                            android:layout_toRightOf="@+id/img_fragment_signup_own_battle"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="- - - - -"
+                            android:textColor="@color/color_font_black_weight"
+                            android:textSize="@dimen/font_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_fragment_signup_own_battle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_17"
+                            android:layout_below="@+id/tv_fragment_signup_own_battle_name"
+                            android:layout_marginBottom="@dimen/size_10"
+                            android:layout_toRightOf="@+id/img_fragment_signup_own_battle">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_signup_own_battle_position"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:minWidth="@dimen/size_24"
+                                android:text="--"
+                                android:textColor="@color/color_font_black"
+                                android:textSize="@dimen/font_12" />
+
+                            <View
+                                android:layout_width="@dimen/size_1"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/size_8"
+                                android:layout_marginRight="@dimen/size_8"
+                                android:background="#FFEEEEEE" />
+
+                            <TextView
+                                android:id="@+id/tv_fragment_signup_own_battle_distance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:minWidth="@dimen/size_24"
+                                android:text="-km"
+                                android:textColor="@color/color_font_black"
+                                android:textSize="@dimen/font_12" />
+
+                            <View
+                                android:layout_width="@dimen/size_1"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/size_8"
+                                android:layout_marginRight="@dimen/size_8"
+                                android:background="#FFEEEEEE" />
+
+                            <TextView
+                                android:id="@+id/tv_fragment_signup_own_battle_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:minWidth="@dimen/size_24"
+                                android:text="--人"
+                                android:textColor="@color/color_font_black"
+                                android:textSize="@dimen/font_12" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_fragment_signup_own_battle_intro"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_17"
+                            android:layout_below="@+id/ll_fragment_signup_own_battle"
+                            android:layout_marginRight="@dimen/size_20"
+                            android:layout_toRightOf="@+id/img_fragment_signup_own_battle"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="队长：每周放风两天"
+                            android:textColor="@color/color_font_black"
+                            android:textSize="@dimen/font_12" />
+
+                        <TextView
+                            android:id="@+id/tv_fragment_signup_own_battle_signup"
+                            android:layout_width="@dimen/size_72"
+                            android:layout_height="@dimen/size_25"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/size_14"
+                            android:background="@drawable/shape_battle_team_signup"
+                            android:gravity="center"
+                            android:text="战队详情"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_10"
+                    android:background="#FFFAFAFA" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_22"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_marginTop="@dimen/size_14"
+                android:gravity="center_vertical"
+                android:text="战队列表"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/indicator_fragment_signup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginBottom="@dimen/size_12">
+
+            </net.lucode.hackware.magicindicator.MagicIndicator>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_fragment_signup_battleList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/size_10"
+                android:paddingRight="@dimen/size_10">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_signup_load_more"
+                android:layout_width="@dimen/size_112"
+                android:layout_height="@dimen/size_32"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_10"
+                android:background="@drawable/selector_load_more"
+                android:gravity="center"
+                android:text="查看更多"
+                android:textColor="@color/selector_load_more" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="#FFFAFAFA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_180"
+                android:orientation="vertical"
+                android:padding="@dimen/size_14">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_22"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:text="跑友说"
+                    android:textColor="@color/color_font_black"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_fragment_signup_runningFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="#FFFAFAFA" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_100">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_fragment_signup_advertising"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_100">
+
+                </android.support.v4.view.ViewPager>
+
+                <RadioGroup
+                    android:id="@+id/rg_fragment_signup_advertising"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_6"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:orientation="horizontal">
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginBottom="@dimen/size_10"
+                android:background="@drawable/icon_bottom_logo" />
+
+        </LinearLayout>
+
+    </com.tourye.run.views.MyScrollview>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/indicator_fragment_signup_suspension"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:layout_marginTop="@dimen/size_50"
+        android:layout_marginBottom="@dimen/size_12"
+        android:background="@color/color_white"
+        android:visibility="gone">
+
+    </net.lucode.hackware.magicindicator.MagicIndicator>
+
+    <ImageView
+        android:id="@+id/img_fragment_signup_invite"
+        android:layout_width="@dimen/size_84"
+        android:layout_height="@dimen/size_84"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size_300"
+        android:background="@drawable/icon_invite_gift" />
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.punch.ScreenPunchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_14"
+            android:layout_marginBottom="@dimen/size_11"
+            android:text="上传打卡(上传软件截图或跑步机照片)"
+            android:textColor="@color/color_font_black_weight"
+            android:textSize="@dimen/font_16" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="+"
+                android:textSize="128sp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="@dimen/size_195"
+                android:background="@drawable/shape_dotted_line"
+                android:layout_marginBottom="@dimen/size_20"/>
+
+            <ImageView
+                android:id="@+id/img_activity_screen_punch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_195"
+                android:layout_marginBottom="@dimen/size_20" />
+
+            <ImageView
+                android:id="@+id/img_activity_screen_punch_reset"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/size_5"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/size_5"
+                android:background="@drawable/icon_close_image"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="@dimen/size_25" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:layout_marginBottom="@dimen/size_10"
+            android:background="@drawable/shape_activity_screen_punch"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_44"
+                android:gravity="center_vertical"
+                android:text="距离"
+                android:textColor="@color/color_font_black_weight"
+                android:textSize="@dimen/font_14" />
+
+            <EditText
+                android:id="@+id/edt_activity_sedtcreen_punch_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/size_15"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:gravity="center_vertical|right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="KM"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:layout_marginBottom="@dimen/size_10"
+            android:background="@drawable/shape_activity_screen_punch"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_44"
+                android:gravity="center_vertical"
+                android:text="时长"
+                android:textColor="@color/color_font_black_weight"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_activity_screen_punch_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="请选择"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:layout_marginBottom="@dimen/size_10"
+            android:background="@drawable/shape_activity_screen_punch"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_44"
+                android:gravity="center_vertical"
+                android:text="越野跑模式"
+                android:textColor="@color/color_font_black_weight"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_activity_screen_punch_crossCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="关"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_10"
+            android:text="1、当天跑步需在23：59前打卡，逾期不能补卡。国外跑友也按北京时间打卡。
+2、平均配速不能大于15分钟/每公里"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_screen_punch_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_punch_rule_detail"
+            android:textColor="#FF4A90E2"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_activity_screen_punch_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_49"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_submit_screen_punch"
+        android:gravity="center"
+        android:text="上传打卡"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_18" />
+
+</RelativeLayout>

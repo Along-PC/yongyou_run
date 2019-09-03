@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    tools:context=".ui.activities.mine.TeamManageActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size_49"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_163">
+
+                <ImageView
+                    android:id="@+id/img_activity_team_manage_scale"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_activity_team_manage_mongolianLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#70000000"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_activity_team_manage_logo"
+                    android:layout_width="@dimen/size_72"
+                    android:layout_height="@dimen/size_72"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginTop="@dimen/size_11"
+                    android:layout_marginRight="@dimen/size_10" />
+
+                <TextView
+                    android:id="@+id/tv_activity_team_manage_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_22"
+                    android:layout_marginTop="@dimen/size_23"
+                    android:layout_marginRight="@dimen/size_2"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:layout_toLeftOf="@+id/ll_activity_team_manage_setting"
+                    android:layout_toRightOf="@+id/img_activity_team_manage_logo"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="- - - - 团"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_16" />
+
+                <TextView
+                    android:id="@+id/tv_activity_team_manage_cutoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_20"
+                    android:layout_below="@+id/tv_activity_team_manage_name"
+                    android:layout_toRightOf="@+id/img_activity_team_manage_logo"
+                    android:gravity="center_vertical"
+                    android:text="报名截止时间 "
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_14" />
+
+                <LinearLayout
+                    android:id="@+id/ll_activity_team_manage_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_10">
+
+                    <ImageView
+                        android:id="@+id/img_activity_team_manage_setting"
+                        android:layout_width="@dimen/size_18"
+                        android:layout_height="@dimen/size_18"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/size_3"
+                        android:layout_toLeftOf="@+id/tv_activity_team_manage_setting"
+                        android:background="@drawable/icon_running_setting" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_team_manage_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="战队设置"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_10" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-60dp"
+                android:background="@drawable/shape_team_detail_back"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_80"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_activity_team_manage_member"
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_activity_team_manage_memberCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/size_35"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/size_15"
+                                android:includeFontPadding="false"
+                                android:text="- -"
+                                android:textColor="@color/color_font_team_manage"
+                                android:textSize="@dimen/font_30"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/size_20"
+                                android:layout_gravity="center_horizontal"
+                                android:text="总成员"
+                                android:textColor="@color/color_font_team_manage"
+                                android:textSize="@dimen/font_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_activity_team_manage_bonus"
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_activity_team_manage_bonus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/size_15"
+                                android:includeFontPadding="false"
+                                android:text="- -"
+                                android:textColor="@color/color_font_team_manage"
+                                android:textSize="@dimen/font_30"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="最高奖金(元)"
+                                android:textColor="@color/color_font_team_manage"
+                                android:textSize="@dimen/font_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_activity_team_manage_finish_rate"
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tv_activity_team_manage_finish_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/size_15"
+                                android:includeFontPadding="false"
+                                android:text="- -"
+                                android:textColor="@color/color_font_team_manage"
+                                android:textSize="@dimen/font_30"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="战队完赛率"
+                                android:textColor="@color/color_font_team_manage"
+                                android:textSize="@dimen/font_14" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/size_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_activity_team_manage_withdraw"
+                                android:layout_width="@dimen/size_116"
+                                android:layout_height="@dimen/size_36"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/size_14"
+                                android:background="@drawable/shape_team_manage_withdraw"
+                                android:gravity="center"
+                                android:text="奖金提现"
+                                android:textColor="@color/color_red"
+                                android:textSize="@dimen/font_14" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_activity_team_manage_punch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:background="@color/color_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_22"
+                        android:layout_marginTop="@dimen/size_15">
+
+                        <TextView
+                            android:id="@+id/tv_activity_team_manage_punch_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/size_14"
+                            android:gravity="center"
+                            android:text="201*.**.**"
+                            android:textColor="#FF4A90E2"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/size_16"
+                            android:layout_height="@dimen/size_16"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/size_2"
+                            android:background="@drawable/icon_arrow_punch_bottom" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_activity_team_manage_punch_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_50"
+                        android:gravity="center"
+                        android:text="超出队长管理时限，无法查看"
+                        android:textColor="@color/color_font_gray_lite"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_team_manage_punch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_300">
+
+                        <com.tourye.run.views.RingView
+                            android:id="@+id/ring_activity_team_manage"
+                            android:layout_width="@dimen/size_192"
+                            android:layout_height="@dimen/size_192"
+                            android:layout_centerHorizontal="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_20"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_46"
+                            android:gravity="center"
+                            android:text="打卡成功/队伍人数"
+                            android:textColor="#FFB0B2B3"
+                            android:textSize="@dimen/font_12" />
+
+                        <TextView
+                            android:id="@+id/tv_activity_team_manage_successToAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_47"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_69"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="--/--"
+                            android:textColor="@color/color_font_black"
+                            android:textSize="@dimen/font_40"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_activity_team_manage_punch_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/size_17"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_130"
+                            android:drawableRight="@drawable/icon_arrow_punch_right"
+                            android:gravity="center"
+                            android:text="打卡明细"
+                            android:textColor="#4A90E2"
+                            android:textSize="@dimen/font_12" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_70"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/size_20">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/size_0"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_activity_team_manage_unpunch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="--"
+                                    android:textColor="@color/color_font_black"
+                                    android:textSize="@dimen/font_40"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="未打卡"
+                                    android:textColor="@color/color_font_black"
+                                    android:textSize="@dimen/font_12" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/size_0"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_activity_team_manage_tocheck"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="--"
+                                    android:textColor="@color/color_font_black"
+                                    android:textSize="@dimen/font_40"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="待审核"
+                                    android:textColor="@color/color_font_black"
+                                    android:textSize="@dimen/font_12" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/size_0"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_activity_team_manage_nopass"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="--"
+                                    android:textColor="@color/color_font_black"
+                                    android:textSize="@dimen/font_40"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="审核未通过"
+                                    android:textColor="@color/color_font_black"
+                                    android:textSize="@dimen/font_12" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_1"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_activity_team_manage_visit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_24"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="访客量"
+                        android:textColor="@color/color_font_team_manage"
+                        android:textSize="@dimen/font_16"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24"
+                        android:background="@drawable/icon_arrow_right" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_activity_team_manage_visitCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:text="有- - -人访问战队主页，其中- -人已报名该战队！"
+                    android:textColor="@color/color_font_team_manage"
+                    android:textSize="@dimen/font_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_activity_team_manage_visit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_97"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_30"
+                    app:cardElevation="@dimen/size_2">
+
+                    <LinearLayout
+                        android:id="@+id/ll_activity_team_manage_recruit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_44">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/size_12"
+                            android:layout_weight="1"
+                            android:text="战队人数榜"
+                            android:textColor="@color/color_font_team_manage"
+                            android:textSize="@dimen/font_16"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_recruit_rank_first"
+                            android:layout_width="@dimen/size_38"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_recruit_rank_first"
+                                android:layout_width="@dimen/size_30"
+                                android:layout_height="@dimen/size_30"
+                                android:layout_centerVertical="true" />
+
+                            <ImageView
+                                android:id="@+id/img_recruit_rank_gold"
+                                android:layout_width="@dimen/size_16"
+                                android:layout_height="@dimen/size_16"
+                                android:layout_alignTop="@+id/img_recruit_rank_first"
+                                android:layout_marginLeft="-10dp"
+                                android:layout_marginTop="-4dp"
+                                android:layout_toRightOf="@+id/img_recruit_rank_first"
+                                android:background="@drawable/icon_crown_gold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_recruit_rank_second"
+                            android:layout_width="@dimen/size_38"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_recruit_rank_second"
+                                android:layout_width="@dimen/size_30"
+                                android:layout_height="@dimen/size_30"
+                                android:layout_centerVertical="true" />
+
+                            <ImageView
+                                android:id="@+id/img_recruit_rank_silver"
+                                android:layout_width="@dimen/size_16"
+                                android:layout_height="@dimen/size_16"
+                                android:layout_alignTop="@+id/img_recruit_rank_second"
+                                android:layout_marginLeft="-10dp"
+                                android:layout_marginTop="-4dp"
+                                android:layout_toRightOf="@+id/img_recruit_rank_second"
+                                android:background="@drawable/icon_crown_silver" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_recruit_rank_third"
+                            android:layout_width="@dimen/size_38"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_recruit_rank_third"
+                                android:layout_width="@dimen/size_30"
+                                android:layout_height="@dimen/size_30"
+                                android:layout_centerVertical="true" />
+
+                            <ImageView
+                                android:id="@+id/img_recruit_rank_copper"
+                                android:layout_width="@dimen/size_16"
+                                android:layout_height="@dimen/size_16"
+                                android:layout_alignTop="@+id/img_recruit_rank_third"
+                                android:layout_marginLeft="-10dp"
+                                android:layout_marginTop="-4dp"
+                                android:layout_toRightOf="@+id/img_recruit_rank_third"
+                                android:background="@drawable/icon_crown_copper" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="@dimen/size_24"
+                            android:layout_height="@dimen/size_24"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/icon_arrow_right" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_22"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/size_14"
+                    android:text="队长学院"
+                    android:textColor="@color/color_font_black_weight"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_104"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_4">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_team_up_punchRate"
+                        android:layout_width="@dimen/size_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_up_punch_rate">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_8"
+                            android:text="怎么提升打卡率"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_32"
+                            android:text="教你打造一支铁军战队"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_team_attract_hundred"
+                        android:layout_width="@dimen/size_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_how_hundred">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_8"
+                            android:text="怎么招满100人"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_32"
+                            android:text="看完此帖成跑圈大神"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_104"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_team_activity_rule"
+                        android:layout_width="@dimen/size_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_activity_rule">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_8"
+                            android:text="百日跑总规则"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_32"
+                            android:text="看这一篇就都明白了"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_activity_team_need_knowledge"
+                        android:layout_width="@dimen/size_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_need_knowledge">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_8"
+                            android:text="队长必备知识"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_9"
+                            android:layout_marginTop="@dimen/size_32"
+                            android:text="助你轻松管理战队"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_22"
+                    android:layout_marginTop="@dimen/size_30"
+                    android:layout_marginBottom="@dimen/size_10"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_14">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="阶梯奖励"
+                        android:textColor="@color/color_font_team_manage"
+                        android:textSize="@dimen/font_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="（奖励仅队长可见，禁止外传）"
+                        android:textColor="@color/color_font_team_manage"
+                        android:textSize="@dimen/font_14" />
+
+                </LinearLayout>
+
+                <com.tourye.run.views.MeasureGridView
+                    android:id="@+id/grid_activity_team_manage_award"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:horizontalSpacing="@dimen/size_10"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                </com.tourye.run.views.MeasureGridView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_10"
+                    android:background="#FFF5F5F5" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_100"
+                    android:visibility="gone">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_activity_team_manage_advertising"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_100">
+
+                    </android.support.v4.view.ViewPager>
+
+                    <RadioGroup
+                        android:id="@+id/rg_activity_team_manage_advertising"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_6"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:orientation="horizontal">
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_10"
+                    android:background="#FFF5F5F5"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_activity_team_manage_contract"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size_14"
+                        android:text="队长合同"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_team_manage_contract"
+                        android:layout_width="@dimen/size_80"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_14"
+                        android:background="@drawable/shape_leader_contract_look_over"
+                        android:gravity="center"
+                        android:text="查看"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="#FFF5F5F5" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_activity_team_manage_flag_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_14"
+                        android:layout_weight="1"
+                        android:text="队旗申请"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_80"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/size_14"
+                        android:background="@drawable/shape_leader_contract_look_over"
+                        android:gravity="center"
+                        android:text="查看"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_10"
+                    android:background="#FFF5F5F5" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_bottom_logo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_49"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_activity_team_manage_share"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_2"
+                android:layout_marginBottom="@dimen/size_6"
+                android:background="@drawable/icon_battle_detail_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="分享"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_11" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_activity_team_manage_invite"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_team_detail_welfare"
+            android:gravity="center"
+            android:text="分享邀请卡"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_team_manage_host"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_team_detail_package"
+            android:gravity="center"
+            android:text="战队主页"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_36">
+
+    <TextView
+        android:id="@+id/tv_item_team_manage_calendar"
+        android:text="--"
+        android:textSize="@dimen/font_16"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selector_item_calendar"
+        android:layout_width="@dimen/size_36"
+        android:layout_height="@dimen/size_36" />
+
+</RelativeLayout>

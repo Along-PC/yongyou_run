@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tourye.run">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 高德地图  允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <!--如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 保持cpu锁屏运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--获取栈顶activity-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!--bugly-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_start_logo"
+        android:label="@string/app_name"
+        android:debuggable="true"
+        android:roundIcon="@mipmap/icon_start_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <!-- 高德地图key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="5b12f7caa938993068aa53aaf748132e" />
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <service
+            android:name=".services.LocationTempService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+        <service
+            android:name=".location.LocationService"
+            android:process=":remote1">
+            <intent-filter>
+                <action android:name="com.tourye.run.LocationService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".location.LocationHelperService"
+            android:process=":remote2">
+            <intent-filter>
+                <action android:name="com.tourye.run.location.LocationHelperService" />
+            </intent-filter>
+        </service>
+        <!-- 高德地图 -->
+
+        <activity android:name=".ui.activities.MainActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.activities.punch.RunningActivity" />
+        <activity android:name=".ui.activities.punch.RunningSettingActivity" />
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@style/MainTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.LoginActivity" />
+        <activity android:name=".ui.activities.mine.FunctionSettingActivity" />
+        <activity android:name=".ui.activities.mine.EditInformationActivity">
+        </activity>
+        <activity
+            android:name=".ui.activities.punch.MapActivity" />
+        <activity android:name=".ui.activities.home.BattleReportActivity" />
+        <activity android:name=".ui.activities.home.TeamDetailActivity" />
+        <activity android:name=".ui.activities.mine.TeamMemberActivity" />
+        <activity
+            android:name=".ui.activities.home.ShippingAddressActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activities.home.TeamRankingActivity" />
+        <activity android:name=".ui.activities.common.ImageDetailActivity" />
+        <activity android:name=".ui.activities.community.CommunityDetailActivity" />
+        <activity android:name=".ui.activities.mine.TeamManageActivity" />
+        <activity
+            android:name=".ui.activities.mine.PersonInfoActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activities.mine.MessageNotificationActivity" />
+        <activity android:name=".ui.activities.mine.MyAccountActivity" />
+        <activity android:name=".ui.activities.home.LeaderApplyActivity" />
+        <activity android:name=".ui.activities.home.SignupActivity" />
+        <activity android:name=".ui.activities.home.UpgradePackageActivity" />
+        <activity android:name=".ui.activities.home.BattleRankingActivity" />
+        <activity android:name=".ui.activities.home.KitActivity" />
+        <activity android:name=".ui.activities.common.CommonWebActivity" />
+        <activity android:name=".ui.activities.home.SearchBattleActivity" />
+        <activity android:name=".ui.activities.punch.ScreenPunchActivity" />
+        <activity android:name=".ui.activities.punch.ScreenPunchResultActivity" />
+        <activity android:name=".ui.activities.punch.CheckPunchActivity" />
+        <activity android:name=".ui.activities.home.CreateBattleActivity" />
+        <activity android:name=".ui.activities.punch.PunchRecordActivity" />
+        <activity android:name=".ui.activities.community.CommentActivity" />
+        <activity android:name=".ui.activities.community.CreateDynamicActivity" />
+        <activity android:name=".ui.activities.mine.MultiTeamManageActivity" />
+        <activity android:name=".ui.activities.mine.RecruitRankActivity" />
+        <activity android:name=".ui.activities.mine.InfluencePeopleActivity" />
+        <activity android:name=".ui.activities.mine.PunchCalendarActivity"></activity>
+        <activity android:name=".ui.activities.mine.PunchDetailActivity" />
+        <activity android:name=".ui.activities.mine.BonusWithdrawalActivity" />
+        <activity android:name=".ui.activities.mine.ViewContractActivity" />
+        <activity android:name=".ui.activities.mine.DigitalProtocolActivity" />
+        <activity android:name=".ui.activities.mine.IdentityVerifiedActivity" />
+        <activity android:name=".ui.activities.mine.PrizeSigningActivity" />
+        <activity android:name=".ui.activities.mine.WithdrawalConfirmActivity" />
+        <activity android:name=".ui.activities.mine.WithdrawalConfirmEditActivity" />
+        <activity android:name=".ui.activities.mine.LogisticsActivity" />
+        <activity android:name=".ui.activities.mine.CheckImageActivity" />
+        <activity
+            android:name=".ui.activities.mine.RunningGroupApplyActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activities.punch.RunningResultActivity" />
+        <activity android:name=".ui.activities.punch.RunningShareActivity" />
+        <activity android:name=".ui.activities.punch.AchievementCardActivity" />
+        <activity android:name=".ui.activities.AreaActivity" />
+
+        <receiver
+            android:name=".receiver.LocationAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.activities.common.SingleImageActivity"></activity>
+
+    </application>
+
+</manifest>

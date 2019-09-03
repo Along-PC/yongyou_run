@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">百日跑</string>
+    <string name="long_address">详细地址<font color="#ff0000">*</font></string>
+    <string name="signup_protocol"><font color="#FF999999">报名即同意</font><font color="#FF5A9AE4">《用户协议》和《百日跑规则》</font></string>
+    <string name="create_own_battle"><u>去创建自己的战队</u>></string>
+    <string name="screen_punch_rule_detail"><u>详细规则</u></string>
+    <string name="pay_package_detail_collapse"><u>展开详情</u></string>
+    <string name="pay_package_detail_extends"><u>收起详情</u></string>
+    <string name="digital_protocal">同意<font color="#FF85B4EB">《数字证书使用协议》</font></string>
+    <string name="phone_after_sale"><u>400-900-7686</u></string>
+</resources>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.FunctionSettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="每日打卡提醒"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+
+            <Switch
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginLeft="@dimen/size_14"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="每日打卡提醒"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="00:00  >"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_10"
+            android:background="#FFF2F2F2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="评论通知"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+
+
+            <Switch
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginLeft="@dimen/size_14"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="点赞通知"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+
+
+            <Switch
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_marginLeft="@dimen/size_14"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44"
+            android:paddingLeft="@dimen/size_14"
+            android:paddingRight="@dimen/size_14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="系统通知"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+
+
+            <Switch
+                android:layout_width="@dimen/size_50"
+                android:layout_height="@dimen/size_24"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_10"
+            android:background="#FFF2F2F2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_activity_function_setting_cache"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="清除缓存"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tv_activity_function_setting_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="--M"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginLeft="@dimen/size_14"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="版本信息"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tv_activity_function_setting_version"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="1.0.0"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF2F2F2">
+
+        <TextView
+            android:id="@+id/activity_function_setting_tv_quit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_marginBottom="@dimen/size_30"
+            android:background="@drawable/shape_function_setting_exit"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16" />
+
+    </RelativeLayout>
+
+</LinearLayout>

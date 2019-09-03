@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_dialog_address_bar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+        <TextView
+            android:id="@+id/tv_dialog_address_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size_20"
+            android:paddingRight="@dimen/size_20"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/tv_dialog_address_certain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size_20"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/size_20"
+            android:text="确定" />
+
+        <View
+            android:background="@color/color_line"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_14">
+
+        <TextView
+            android:id="@+id/tv_dialog_address_province"
+            style="@style/commonFont"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingRight="@dimen/size_10" />
+
+        <TextView
+            android:id="@+id/tv_dialog_address_city"
+            style="@style/commonFont"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingRight="@dimen/size_10"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_dialog_address_county"
+            style="@style/commonFont"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingRight="@dimen/size_10"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_line" />
+
+    <ListView
+        android:id="@+id/list__dialog_address_province"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/list__dialog_address_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/list__dialog_address_county"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </ListView>
+
+
+</LinearLayout>

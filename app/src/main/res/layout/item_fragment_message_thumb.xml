@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/size_14"
+    android:paddingBottom="@dimen/size_20"
+    android:paddingTop="@dimen/size_10"
+    android:paddingRight="@dimen/size_14">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingRight="@dimen/size_20">
+
+        <ImageView
+            android:id="@+id/img_item_message_thumb_head"
+            android:layout_width="@dimen/size_36"
+            android:layout_height="@dimen/size_36"
+            android:layout_marginRight="@dimen/size_10" />
+
+        <TextView
+            android:id="@+id/tv_item_message_thumb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_toLeftOf="@+id/tv_item_message_thumb_time"
+            android:layout_marginBottom="@dimen/size_4"
+            android:layout_toRightOf="@+id/img_item_message_thumb_head"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxEms="20"
+            android:maxLines="1"
+            android:text="---"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_item_message_thumb_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:text="---"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_item_message_thumb_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_message_thumb_name"
+            android:layout_toRightOf="@+id/img_item_message_thumb_head"
+            android:text=""
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_message_thumb_refer"
+        android:layout_width="@dimen/size_60"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLength="15" />
+
+    <ImageView
+        android:id="@+id/img_item_message_thumb_refer"
+        android:layout_width="@dimen/size_60"
+        android:layout_height="@dimen/size_60" />
+
+</LinearLayout>

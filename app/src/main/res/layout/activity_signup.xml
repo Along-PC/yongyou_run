@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.home.SignupActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size_46">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_79">
+
+                <TextView
+                    android:id="@+id/tv_activity_signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_14"
+                    android:layout_marginTop="@dimen/size_15"
+                    android:layout_marginBottom="@dimen/size_11"
+                    android:layout_toLeftOf="@+id/img_activity_signup_head"
+                    android:text="战队名称：------------"
+                    android:ellipsize="end"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:maxLines="1"
+                    android:textColor="@color/color_font_black_weight"
+                    android:textSize="@dimen/font_16" />
+
+                <ImageView
+                    android:id="@+id/img_activity_signup_head"
+                    android:layout_width="@dimen/size_60"
+                    android:layout_height="@dimen/size_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/size_14" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_17"
+                    android:layout_below="@+id/tv_activity_signup_name"
+                    android:layout_marginLeft="@dimen/size_14">
+
+                    <TextView
+                        android:id="@+id/tv_activity_signup_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:gravity="center"
+                        android:minWidth="@dimen/size_24"
+                        android:text="--"
+                        android:textColor="#FF888888"
+                        android:textSize="@dimen/font_12" />
+
+                    <View
+                        android:layout_width="@dimen/size_1"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_marginLeft="@dimen/size_4"
+                        android:layout_marginRight="@dimen/size_4"
+                        android:background="#FF888888" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_signup_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_17"
+                        android:gravity="center"
+                        android:minWidth="@dimen/size_24"
+                        android:text="-km"
+                        android:textColor="#FF888888"
+                        android:textSize="@dimen/font_12" />
+
+                    <View
+                        android:layout_width="@dimen/size_1"
+                        android:layout_height="@dimen/size_17"
+                        android:layout_marginLeft="@dimen/size_4"
+                        android:layout_marginRight="@dimen/size_4"
+                        android:background="#FF888888" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_signup_counts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:minWidth="@dimen/size_24"
+                        android:text="--人"
+                        android:textColor="#FF888888"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#FF888888" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_22"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginBottom="@dimen/size_20"
+                android:text="选择套餐"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/font_16" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_activity_signup_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#FF888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:paddingLeft="@dimen/size_14"
+                android:paddingRight="@dimen/size_14">
+
+                <CheckBox
+                    android:id="@+id/cb_activity_signup_protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/size_5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color_font_gray_lite"
+                    android:text="报名即同意"
+                    android:textSize="@dimen/font_12" />
+                <TextView
+                    android:id="@+id/tv_activity_signup_protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FF5A9AE4"
+                    android:text="《用户协议》"
+                    android:textSize="@dimen/font_12" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color_font_gray_lite"
+                    android:text=" 和 "
+                    android:textSize="@dimen/font_12" />
+                <TextView
+                    android:id="@+id/tv_activity_signup_rule"
+                    android:textColor="#FF5A9AE4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="《百日跑规则》"
+                    android:textSize="@dimen/font_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/size_10"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size_14"
+                android:paddingRight="@dimen/size_14">
+
+                <TextView
+                    android:text="支付方式"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/size_23"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_22" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/size_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_marginRight="@dimen/size_10"
+                        android:background="@drawable/icon_wx" />
+
+                    <TextView
+                        android:text="微信"
+                        android:textSize="@dimen/font_14"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/rb_activity_signup_pay_wx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_marginRight="@dimen/size_10"
+                        android:background="@drawable/icon_zfb" />
+
+                    <TextView
+                        android:text="支付宝"
+                        android:textSize="@dimen/font_14"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/rb_activity_signup_pay_zfb"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_116"
+                android:background="#FFF5F5F5">
+
+                <ImageView
+                    android:layout_width="@dimen/size_98"
+                    android:layout_height="@dimen/size_39"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/size_13"
+                    android:background="@drawable/icon_bottom_logo" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_activity_signup_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/size_10"
+            android:text="小计:¥---"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tv_activity_signup_submit"
+            android:layout_width="@dimen/size_172"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_create_dynamic_submit"
+            android:gravity="center"
+            android:text="支付报名"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16" />
+
+    </LinearLayout>
+
+</RelativeLayout>

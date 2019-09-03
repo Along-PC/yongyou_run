@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#FFFF7C47</color>
+
+    <color name="color_font_black">#FF333333</color>
+    <color name="color_font_black_weight">#FF101010</color>
+    <color name="color_font_gray">#FF666666</color>
+    <color name="color_font_gray_lite">#FF999999</color>
+
+    <color name="color_font_red">#FFCC1C24</color>
+    <color name="color_font_dynamic_name">#FF000000</color>
+    <color name="color_font_team_manage">#FF101010</color>
+    <color name="color_font_person_info">#FF101010</color>
+    <color name="color_font_person_info_hint">#FFCCCCCC</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#FF000000</color>
+    <color name="color_line">#FFFAFAFA</color>
+    <color name="color_line_weight">#F5F5F5</color>
+    <color name="color_red">#FFFF1D1D</color>
+    <color name="color_divider">#FFF5F5F5</color>
+
+    <color name="color_f6">#f6f6f6</color>
+
+    <color name="color_punch_accepted">#ef4A90E2</color>
+    <color name="color_punch_rejected">#efFAE4E1</color>
+
+</resources>

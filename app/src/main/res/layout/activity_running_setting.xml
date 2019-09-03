@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF2F2F2"
+    tools:context=".ui.activities.punch.RunningSettingActivity">
+
+    <LinearLayout
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:text="保持屏幕常亮"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Switch
+                android:id="@+id/switch_activity_running_setting_light"
+                android:thumb="@drawable/selector_switch_thumb"
+                android:track="@drawable/selector_switch_track"
+                android:layout_marginRight="@dimen/size_14"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_30" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/size_14"
+            android:background="#FFF2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:text="默认锁屏"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Switch
+                android:id="@+id/switch_activity_running_setting_lock"
+                android:thumb="@drawable/selector_switch_thumb"
+                android:track="@drawable/selector_switch_track"
+                android:layout_marginRight="@dimen/size_14"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_30" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/size_14"
+            android:background="#FFF2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44">
+
+            <TextView
+                android:text="语音播报"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Switch
+                android:id="@+id/switch_activity_running_setting_broadcast"
+                android:thumb="@drawable/selector_switch_thumb"
+                android:track="@drawable/selector_switch_track"
+                android:layout_marginRight="@dimen/size_14"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_30" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

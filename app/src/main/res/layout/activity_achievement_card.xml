@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.punch.AchievementCardActivity">
+
+    <ImageView
+        android:id="@+id/img_activity_achievement_card"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0" />
+
+    <View
+        android:layout_marginTop="@dimen/size_30"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:background="#FFDDDDDD"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_96">
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_download"
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_share_download"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_check"
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_activity_achievement_card_check"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_card_check"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+            <TextView
+                android:id="@+id/tv_activity_achievement_card_check"
+                android:layout_width="@dimen/size_18"
+                android:layout_height="@dimen/size_18"
+                android:layout_alignTop="@+id/img_activity_achievement_card_check"
+                android:layout_marginLeft="-15dp"
+                android:layout_marginTop="-8dp"
+                android:layout_toRightOf="@+id/img_activity_achievement_card_check"
+                android:background="@drawable/shape_achievement_card_count"
+                android:gravity="center"
+                android:text="99+"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_8" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_wx"
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_share_wx"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_moment"
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_share_moments"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_wb"
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_share_wb"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_qq"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_share_qq"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_achievement_card_kj"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_share_kj"
+                android:layout_width="@dimen/size_38"
+                android:layout_height="@dimen/size_38" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

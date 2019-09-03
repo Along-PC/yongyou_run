@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_activity_running_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.punch.RunningResultActivity">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_activity_running_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps.MapView>
+
+    <LinearLayout
+        android:id="@+id/ll_activity_running_result_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size_45"
+        android:layout_marginRight="@dimen/size_23"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_24"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_2"
+            android:background="@drawable/icon_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发动态"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_activity_running_result_mapstatus"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:layout_above="@+id/rl_activity_running_result_achievement"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginBottom="@dimen/size_15"
+        android:background="@drawable/selector_map_showorhide" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_running_result_achievement"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_171"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginBottom="@dimen/size_93"
+        android:background="@drawable/shape_running_result_white_achievement"
+        android:paddingLeft="@dimen/size_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_17"
+            android:layout_marginTop="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:text="百日跑"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_running_result_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_17"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_15"
+            android:gravity="center_vertical"
+            android:text="20**-**-** **:**:**"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_running_result_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_70"
+            android:layout_marginTop="@dimen/size_27"
+            android:includeFontPadding="false"
+            android:text="0.00"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_60"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_activity_running_result_distance"
+            android:layout_toRightOf="@+id/tv_activity_running_result_distance"
+            android:text="公里"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_32"
+            android:text="配速"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_running_result_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_24"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/size_40"
+            android:layout_marginBottom="@dimen/size_30"
+            android:includeFontPadding="false"
+            android:text="00’00”"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_32"
+            android:layout_toLeftOf="@+id/tv_activity_running_result_period"
+            android:text="用时"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_running_result_period"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_24"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size_40"
+            android:layout_marginBottom="@dimen/size_30"
+            android:includeFontPadding="false"
+            android:text="00:00:00"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_20"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:layout_marginBottom="@dimen/size_29">
+
+        <TextView
+            android:id="@+id/tv_activity_running_result_achievement"
+            android:layout_width="@dimen/size_124"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_10"
+            android:background="@drawable/shape_running_result_white_achievement"
+            android:gravity="center"
+            android:text="成就卡"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_running_result_share"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_running_result_white_share"
+            android:gravity="center"
+            android:text="分享"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/size_25"
+        android:layout_height="@dimen/size_25"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_30"
+        android:id="@+id/img_activity_running_result_back"
+        android:background="@drawable/icon_location_result_back" />
+
+</RelativeLayout>

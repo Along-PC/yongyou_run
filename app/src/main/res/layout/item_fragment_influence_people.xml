@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_68">
+
+    <ImageView
+        android:id="@+id/img_item_fragment_influence_people_head"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_10"
+        android:background="@drawable/icon_head" />
+
+    <TextView
+        android:id="@+id/tv_item_fragment_influence_people_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/img_item_fragment_influence_people_phone"
+        android:layout_toRightOf="@+id/img_item_fragment_influence_people_head"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="- - -"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/font_14" />
+
+    <ImageView
+        android:id="@+id/img_item_fragment_influence_people_phone"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_14"
+        android:background="@drawable/icon_phone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line" />
+
+</RelativeLayout>

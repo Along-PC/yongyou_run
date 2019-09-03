@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.MessageNotificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44">
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_message_notify_system"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_activity_message_notify_system"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="系统通知"
+                android:textColor="@color/selector_message_notify_navi" />
+
+            <ImageView
+                android:id="@+id/img_activity_message_notify_system"
+                android:layout_width="@dimen/size_6"
+                android:layout_height="@dimen/size_6"
+                android:layout_alignTop="@+id/tv_activity_message_notify_system"
+                android:layout_marginLeft="@dimen/size_2"
+                android:layout_toRightOf="@+id/tv_activity_message_notify_system"
+                android:background="@drawable/shape_message_notify_point"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_message_notify_comment"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_activity_message_notify_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="评论"
+                android:textColor="@color/selector_message_notify_navi" />
+
+            <ImageView
+                android:id="@+id/img_activity_message_notify_comment"
+                android:layout_width="@dimen/size_6"
+                android:layout_height="@dimen/size_6"
+                android:layout_alignTop="@+id/tv_activity_message_notify_comment"
+                android:layout_marginLeft="@dimen/size_2"
+                android:layout_toRightOf="@+id/tv_activity_message_notify_comment"
+                android:background="@drawable/shape_message_notify_point"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_message_notify_thumb"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_activity_message_notify_thumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="点赞"
+                android:textColor="@color/selector_message_notify_navi" />
+
+            <ImageView
+                android:id="@+id/img_activity_message_notify_thumb"
+                android:layout_width="@dimen/size_6"
+                android:layout_height="@dimen/size_6"
+                android:layout_alignTop="@+id/tv_activity_message_notify_thumb"
+                android:layout_marginLeft="@dimen/size_2"
+                android:layout_toRightOf="@+id/tv_activity_message_notify_thumb"
+                android:background="@drawable/shape_message_notify_point"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_activity_message_notify_line"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_2"
+        android:background="#FF1D1D" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_activity_message_notify"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

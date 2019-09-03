@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_item_team_manage_influence_head"
+        android:layout_width="@dimen/size_56"
+        android:layout_height="@dimen/size_56"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_item_team_manage_influence_signup"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_16"
+        android:layout_below="@+id/img_item_team_manage_influence_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-8dp"
+        android:background="@drawable/shape_team_influence_signup"
+        android:gravity="center"
+        android:text="已报名"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_10" />
+
+    <TextView
+        android:id="@+id/tv_item_team_manage_influence_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_22"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/size_5"
+        android:text="---"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/font_16" />
+
+</RelativeLayout>

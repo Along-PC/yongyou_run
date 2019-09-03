@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_70">
+
+        <ImageView
+            android:id="@+id/img_item_distance_ranking_position"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_item_distance_ranking_position"
+            android:text="-"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24" />
+
+        <ImageView
+            android:id="@+id/img_item_distance_ranking_head"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_44"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50" />
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/img_item_distance_ranking_head"
+            android:layout_toLeftOf="@+id/tv_item_distance_ranking_distance"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item_distance_ranking_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_22"
+                android:gravity="center_vertical"
+                android:text="---"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_item_distance_ranking_pos"
+                android:text="第---名"
+                android:textColor="@color/color_font_gray"
+                android:textSize="@dimen/font_12"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_17" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_distance_ranking_distance"
+            android:text="---"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_item_distance_ranking_thumb"
+            android:background="@drawable/selector_team_detail_thumb"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_14"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24" />
+
+        <TextView
+            android:id="@+id/tv_item_distance_ranking_thumbCount"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_item_distance_ranking_thumb"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/size_10"
+            android:gravity="center"
+            android:text="--"
+            android:maxLines="1"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_12" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_item_distance_ranking_line"
+        android:layout_alignParentBottom="true"
+        android:background="#FFEAEAEA"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+    <View
+        android:id="@+id/view_item_distance_ranking_divider"
+        android:layout_alignParentBottom="true"
+        android:background="#FFEAEAEA"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_10"/>
+
+</LinearLayout>

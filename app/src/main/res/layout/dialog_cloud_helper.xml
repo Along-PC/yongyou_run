@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_248"
+    android:background="@drawable/shape_dialog_back"
+    android:layout_height="@dimen/size_305">
+
+    <TextView
+        android:text="最后一步"
+        android:textSize="@dimen/font_15"
+        android:textColor="@color/color_font_black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img_dialog_cloud_helper_close"
+        android:layout_marginTop="@dimen/size_22"
+        android:layout_marginRight="@dimen/size_16"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/icon_close_dialog"
+        android:layout_width="@dimen/size_16"
+        android:layout_height="@dimen/size_16" />
+
+    <ImageView
+        android:id="@+id/img_dialog_cloud_helper"
+        android:layout_marginTop="@dimen/size_51"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/size_163"
+        android:layout_height="@dimen/size_163" />
+
+    <TextView
+        android:layout_marginTop="@dimen/size_214"
+        android:text="微信搜索小程序“云账户助手”认证"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/color_font_black_weight"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginBottom="@dimen/size_49"
+        android:text="认证一次即可"
+        android:textSize="@dimen/font_14"
+        android:textStyle="bold"
+        android:textColor="@color/color_font_black"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginBottom="@dimen/size_22"
+        android:text="实名认证后才可以提现到账"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/color_font_black"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.mine.RunningGroupApplyActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size_46">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_100"
+                android:background="#f0f" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size_14"
+                android:paddingRight="@dimen/size_14">
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="跑团名称" />
+
+                <EditText
+                    android:id="@+id/edt_activity_running_group_apply_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit"
+                    android:hint="请输入跑团名称(不要超过八个字)"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/size_8"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="跑团地区" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_activity_running_group_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size_8"
+                        android:text="请选择省份"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size_16"
+                        android:layout_height="@dimen/size_16"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_12"
+                        android:background="@drawable/ic_launcher_background" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="跑团成立年份" />
+
+                <EditText
+                    android:id="@+id/edt_activity_running_group_apply_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit"
+                    android:hint="请填写，如2018"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/size_8"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="跑团活动场所" />
+
+                <EditText
+                    android:id="@+id/edt_activity_running_group_apply_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit"
+                    android:hint="请填写场所名称，例上海外滩"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/size_8"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="团长姓名" />
+
+                <EditText
+                    android:id="@+id/edt_activity_running_group_apply_leadername"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit"
+                    android:hint="请输入姓名"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/size_8"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="联系方式" />
+
+                <EditText
+                    android:id="@+id/edt_activity_running_group_apply_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/size_8"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="物料收货地区" />
+
+                <RelativeLayout
+                    android:id="@+id/edt_activity_running_group_apply_shipping_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size_8"
+                        android:text="请选择"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size_16"
+                        android:layout_height="@dimen/size_16"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_12"
+                        android:background="@drawable/ic_launcher_background" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="物料收货详细地址" />
+
+                <EditText
+                    android:id="@+id/edt_activity_running_group_apply_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_44"
+                    android:background="@drawable/shape_person_info_edit"
+                    android:hint="请输入详细地址，xx单元，xx室"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:paddingLeft="@dimen/size_8"
+                    android:textColor="@color/color_font_black"
+                    android:textColorHint="#FFCCCCCC"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="跑团介绍" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_150"
+                    android:background="@drawable/shape_person_info_edit">
+
+                    <EditText
+                        android:id="@+id/edt_activity_running_group_apply_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_12"
+                        android:gravity="start"
+                        android:hint="请输入现有规模，成员人数，跑团成绩，如：跑团成员100人，30位参加过马拉松。队长是中国红十字会急救员，百公里挑战者，健康跑团团长，骑行爱好者，越野赛事挑战者。"
+                        android:textColorHint="#FFCCCCCC"
+                        android:textColor="@color/color_font_black"
+                        android:textSize="@dimen/font_14"
+                        android:layout_marginTop="@dimen/size_10"
+                        android:maxLength="140"
+                        android:layout_marginRight="@dimen/size_12"
+                        android:layout_marginBottom="@dimen/size_30"
+                        android:background="@null" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_running_group_apply_introCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0/140"
+                        android:textSize="@dimen/font_12"
+                        android:textColor="@color/color_font_gray_lite"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="@dimen/size_10"
+                        android:layout_marginBottom="@dimen/size_6" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/runningGroupApplyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20"
+                    android:text="上传您的跑团照片（至少3张）" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_activity_running_group_apply_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_20">
+
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_activity_running_group_apply_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFD4C4F"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16" />
+
+</RelativeLayout>

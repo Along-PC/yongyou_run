@@ -1,0 +1,202 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+/**
+ * 在项目根路径下创建一个文件key.properties
+ */
+def keystorePropertiesFile = rootProject.file('key.properties')
+//创建一个properties对象
+def keystoreProperties = new Properties()
+//加载key.properties里面的内容
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+MobSDK {
+    appKey "2b3180523c046"
+    appSecret "0c4c50ff66bbc556c45b1b04a411cd7d"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient false
+            }
+            Wechat {
+                appId "wx12693e7ca570feeb"
+                appSecret "5717f824bf73336e577b4d922ee634cb"
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+                shareByAppClient true
+            }
+            QZone {
+                appId "1107926873"
+                appKey "WftzNBJMtp48qnSb"
+            }
+            WechatMoments {
+                appId "wx12693e7ca570feeb"
+                appSecret "5717f824bf73336e577b4d922ee634cb"
+            }
+        }
+    }
+
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.tourye.run"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        multiDexEnabled true
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile']) //签名文件
+            storePassword keystoreProperties['storePassword']  //签名文件密码
+            keyAlias keystoreProperties['keyAlias']       //签名文件别名
+            keyPassword keystoreProperties['keyPassword']     //别名密码
+        }
+
+        debug {
+            storeFile file(keystoreProperties['storeFile']) //签名文件
+            storePassword keystoreProperties['storePassword']  //签名文件密码
+            keyAlias keystoreProperties['keyAlias']       //签名文件别名
+            keyPassword keystoreProperties['keyPassword']     //别名密码
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            //脚本构建时网址进行切换
+            buildConfigField('String', 'BASE_URL', '"http://hundred-test.xorout.com/api/v1"')
+            buildConfigField('String', 'DOMAIN_NAME', '"http://hundred-test.xorout.com/"')
+            buildConfigField('String', 'HOST_URL', '"hundred-test.xorout.com"')
+
+            zipAlignEnabled true //Zipalign优化
+            shrinkResources false // 移除无用的resource文件
+            minifyEnabled false //是否开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug//在此调用签名方法
+        }
+
+        release {
+            //脚本构建时网址进行切换
+            buildConfigField('String', 'BASE_URL', '"https://run100.runorout.cn/api/v1"')
+            buildConfigField('String', 'DOMAIN_NAME', '"https://run100.runorout.cn/"')
+            buildConfigField('String', 'HOST_URL', '"run100.runorout.cn"')
+
+            zipAlignEnabled true //Zipalign优化
+            shrinkResources false // 移除无用的resource文件
+            minifyEnabled false //是否开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release//在此调用签名方法
+        }
+    }
+
+    //设置包名
+    applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        //android studio3.0之前命名
+//            variant.outputs.each { output ->
+//                def outputFile = output.outputFile
+//                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                    //应用名+版本号+渠道名+构建类型+时间戳${variant.flavorName}
+//                    def fileName = "green_v${defaultConfig.versionName}_${variant.flavorName}_${releaseTime()}_${buildType}.apk"
+//                    //APK输出到默认目录
+//                    output.outputFile = new File(outputFile.parent, fileName)
+//
+//                }
+//            }
+        //android studio3.0之后命名
+        variant.outputs.all {
+//            outputFileName = "tourye_v${defaultConfig.versionName}_${variant.flavorName}_${releaseTime()}_${buildType}.apk"
+            outputFileName = "run_v${defaultConfig.versionName}_${releaseTime()}_${buildType}.apk"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {//加上这写代码
+        pickFirst 'META-INF/*'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+//发布时间
+def releaseTime() {
+    //设置发布时间的时候不要设置小时，这样的话每个小时生成的包都不一样，在安装时studio会报找不见apk的异常
+//    return new Date().format('MMddHH', TimeZone.getTimeZone('GMT+8'))
+    return new Date().format('MMdd', TimeZone.getTimeZone('GMT+8'))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:28.0.0'
+    //日志打印工具
+    implementation 'com.orhanobut:logger:2.1.1'
+    //网络请求工具
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    //网络请求拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    //json解析
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //导航栏
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    //导航栏
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //动态权限
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    //下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    //event-bus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //图片选择器
+    implementation('com.github.LuckSiege.PictureSelector:picture_library:v2.2.3') {
+        exclude group: 'com.github.bumptech.glide'
+        exclude group: 'io.reactivex.rxjava2'
+        exclude group: 'com.android.support'
+    }
+    implementation 'org.jetbrains:annotations-java5:15.0'
+    //支付宝支付
+    implementation(name: 'alipaySdk-15.6.0-20190226104053', ext: 'aar')
+    //解决方法数超过65535
+    implementation "com.android.support:multidex:1.0.0"
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    //定位sdk
+    implementation 'com.amap.api:location:latest.integration'
+    //高德3d地图sdk
+    implementation 'com.amap.api:3dmap:latest.integration'
+    //日历控件
+    implementation 'com.necer.ncalendar:ncalendar:4.1.2'
+    //bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+}

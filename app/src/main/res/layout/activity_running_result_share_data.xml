@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_activity_result_share_data_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_result_share_data_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_171"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginBottom="@dimen/size_132"
+        android:background="@drawable/shape_running_result_white_achievement">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_17"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:text="百日跑"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_result_share_data_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_17"
+            android:layout_marginLeft="@dimen/size_60"
+            android:layout_marginTop="@dimen/size_10"
+            android:gravity="center_vertical"
+            android:text="20**-**-** --:--:--"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_result_share_data_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_70"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_27"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="0.00"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_60" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignBaseline="@+id/tv_activity_result_share_data_distance"
+            android:layout_toRightOf="@+id/tv_activity_result_share_data_distance"
+            android:gravity="center_vertical"
+            android:text="公里"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_24"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_marginRight="@dimen/size_10"
+                android:text="配速"
+                android:textColor="@color/color_font_gray_lite"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_activity_result_share_data_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:text="00’00”"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_marginRight="@dimen/size_10"
+                android:text="用时"
+                android:textColor="@color/color_font_gray_lite"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_activity_result_share_data_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_40"
+                android:includeFontPadding="false"
+                android:text="00:00:00"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_20"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/size_72"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rl_activity_result_share_data_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-36dp"
+        android:layout_marginRight="@dimen/size_44"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_activity_result_share_data_head"
+            android:layout_width="@dimen/size_72"
+            android:layout_height="@dimen/size_72"
+            android:layout_marginBottom="@dimen/size_6"
+            android:background="@drawable/icon_head" />
+
+        <TextView
+            android:id="@+id/tv_activity_result_share_data_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="姓名"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_activity_result_share_data_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginBottom="@dimen/size_53"
+        android:background="@drawable/icon_running_logo_noword" />
+
+    <TextView
+        android:layout_width="@dimen/size_120"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginRight="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_43"
+        android:layout_toLeftOf="@+id/img_activity_result_share_data_qrcode"
+        android:layout_toRightOf="@+id/img_activity_result_share_data_logo"
+        android:gravity="left"
+        android:lineSpacingExtra="@dimen/size_5"
+        android:text="扫描二维码加入百日跑和我们一起跑步"
+        android:textSize="@dimen/font_12" />
+
+    <ImageView
+        android:id="@+id/img_activity_result_share_data_qrcode"
+        android:layout_width="@dimen/size_96"
+        android:layout_height="@dimen/size_96"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/size_15"
+        android:layout_marginBottom="@dimen/size_15"
+        android:background="@drawable/icon_download_pgy" />
+
+</RelativeLayout>

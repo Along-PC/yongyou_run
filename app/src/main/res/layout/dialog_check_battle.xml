@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_287"
+    android:layout_height="wrap_content"
+    android:maxHeight="@dimen/size_80"
+    android:background="@drawable/shape_dialog_back"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_22"
+                android:text="提示"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_dialog_check_battle_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_10"
+                android:text="当前您已创建-支战队"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="创建新战队会自动填充数据"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_dialog_check_battle_content"
+                android:layout_width="@dimen/size_200"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dialog_check_battle_title"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_10"
+                android:lineSpacingExtra="@dimen/size_5"
+                android:text="---"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_check_battle_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_36"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_10">
+
+        <TextView
+            android:id="@+id/tv_dialog_check_battle_current"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_7"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_button"
+            android:gravity="center"
+            android:text="查已创建战队"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_dialog_check_battle_goOn"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner_button"
+            android:gravity="center"
+            android:text="继续创建"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_item_message_system_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_item_message_system_title"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_5"
+        android:text="一起参加百日跑，瓜分赢奖金！"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/color_font_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_item_message_system_time"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:textColor="@color/color_font_gray_lite"
+        android:text="----/--/--"
+        android:textSize="@dimen/font_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img_item_message_system_banner"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_100" />
+
+    <View
+        android:layout_marginTop="@dimen/size_20"
+        android:background="@color/color_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</LinearLayout>

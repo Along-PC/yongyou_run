@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_139"
+    android:layout_marginLeft="@dimen/size_14"
+    android:layout_marginRight="@dimen/size_14"
+    android:layout_marginBottom="@dimen/size_10">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_activity_punch_record_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_item_activity_punch_record_head"
+            android:layout_width="@dimen/size_72"
+            android:layout_height="@dimen/size_72"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_marginTop="@dimen/size_14"
+            android:scaleType="fitXY"
+            android:layout_marginRight="@dimen/size_11" />
+
+        <TextView
+            android:id="@+id/tv_item_activity_punch_record_description"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_14"
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_toRightOf="@+id/img_item_activity_punch_record_head"
+            android:gravity="center_vertical"
+            android:text="打卡公里数"
+            android:textColor="@color/color_font_gray_lite"
+            android:textSize="@dimen/font_10" />
+
+        <TextView
+            android:id="@+id/tv_item_activity_punch_record_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_35"
+            android:layout_below="@+id/tv_item_activity_punch_record_description"
+            android:layout_marginBottom="@dimen/size_3"
+            android:layout_toRightOf="@+id/img_item_activity_punch_record_head"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="--km"
+            android:textColor="#FFFF5D3A"
+            android:textSize="@dimen/font_30" />
+
+        <TextView
+            android:id="@+id/tv_item_activity_punch_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_19"
+            android:gravity="center_vertical"
+            android:text="--:--:--  --'--''"
+            android:layout_toRightOf="@+id/img_item_activity_punch_record_head"
+            android:layout_below="@+id/tv_item_activity_punch_record_distance"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_16" />
+
+        <View
+            android:background="@color/color_line"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_marginRight="@dimen/size_14"
+            android:layout_marginTop="@dimen/size_14"
+            android:layout_below="@+id/img_item_activity_punch_record_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"/>
+
+        <TextView
+            android:id="@+id/tv_item_activity_punch_record_date"
+            android:text="00-00  --:--"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/color_font_black"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_below="@+id/img_item_activity_punch_record_head"
+            android:layout_marginTop="@dimen/size_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_item_activity_punch_record_arrow"
+            android:layout_marginTop="@dimen/size_38"
+            android:layout_marginRight="@dimen/size_14"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_arrow_right"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_145"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:gravity="center"
+        android:text="下载图片"
+        android:textColor="@color/color_font_black"
+        android:textSize="@dimen/font_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="#FFF2F2F2" />
+
+    <TextView
+        android:id="@+id/tv_dialog_download_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44"
+        android:gravity="center"
+        android:text="下载"
+        android:textColor="@color/color_font_black"
+        android:textSize="@dimen/font_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="#FFF2F2F2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_10"
+        android:background="#FFF2F2F2" />
+
+    <TextView
+        android:id="@+id/tv_dialog_download_image_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_font_black"
+        android:textSize="@dimen/font_18" />
+
+</LinearLayout>

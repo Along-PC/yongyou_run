@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/size_14"
+    android:paddingRight="@dimen/size_14"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_withdrawal_zfb_pickup"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_fragment_withdrawal_zfb_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="提现到支付宝"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/size_14"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/color_font_black_weight"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20" />
+
+            <TextView
+                android:id="@+id/tv_fragment_withdrawal_zfb_account"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/font_14"
+                android:layout_marginTop="@dimen/size_44"
+                android:textColor="@color/color_font_gray_lite"
+                android:text="暂无绑定支付宝账号"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20" />
+
+            <ImageView
+                android:id="@+id/img_fragment_withdrawal_zfb_detail"
+                android:background="@drawable/icon_arrow_right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/size_24"
+                android:layout_height="@dimen/size_24" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fragment_withdrawal_zfb_idcard"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="身份证"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/size_14"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/color_font_black_weight"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20" />
+
+            <TextView
+                android:id="@+id/tv_fragment_withdrawal_zfb_idcard"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/size_10"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/color_font_gray_lite"
+                android:text="123**********6543"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fragment_withdrawal_zfb_pickup"
+            android:text="全部提现"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@drawable/shape_withdrawal_comfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_withdrawal_zfb_info"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="支付宝账号"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/size_14"
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/color_font_black_weight"
+            android:layout_marginBottom="@dimen/size_6"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20" />
+
+        <EditText
+            android:id="@+id/edt_fragment_withdrawal_zfb_account"
+            android:hint="请输入支付宝账号"
+            android:textColor="@color/color_font_black"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/size_10"
+            android:paddingRight="@dimen/size_10"
+            android:textSize="@dimen/font_14"
+            android:textColorHint="@color/color_font_gray_lite"
+            android:background="@drawable/shape_person_info_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44" />
+
+        <TextView
+            android:text="提示：请输入本人实名认证/身份证绑定的账号"
+            android:layout_marginTop="@dimen/size_6"
+            android:layout_marginBottom="@dimen/size_20"
+            android:textColor="#FF888888"
+            android:textSize="@dimen/font_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_fragment_withdrawal_zfb_save"
+            android:text="保存"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@drawable/shape_withdrawal_comfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_44" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

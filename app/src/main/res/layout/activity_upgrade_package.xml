@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.home.UpgradePackageActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginBottom="@dimen/size_46"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="仅有一次套餐升级的机会，升级后旧套餐权益失效"
+                android:textSize="@dimen/font_14"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_marginRight="@dimen/size_14"
+                android:background="@drawable/shape_upgrade_package_notify"
+                android:textColor="@color/color_white"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40" />
+
+            <TextView
+                android:text="升级套餐"
+                android:textColor="@color/color_font_black_weight"
+                android:textSize="@dimen/font_16"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_marginRight="@dimen/size_14"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_22" />
+
+            <android.support.v7.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recycler_activity_upgrade_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_10"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/size_10"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size_14"
+                android:paddingRight="@dimen/size_14">
+
+                <TextView
+                    android:text="支付方式"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/size_23"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_22" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/size_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_marginRight="@dimen/size_10"
+                        android:background="@drawable/icon_wx" />
+
+                    <TextView
+                        android:text="微信"
+                        android:textSize="@dimen/font_14"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/rb_activity_upgrade_package_pay_wx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24"
+                        android:layout_marginRight="@dimen/size_10"
+                        android:background="@drawable/icon_zfb" />
+
+                    <TextView
+                        android:text="支付宝"
+                        android:textSize="@dimen/font_14"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:visibility="gone"
+                        android:id="@+id/rb_activity_upgrade_package_pay_zfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#FFF5F5F5"
+                android:layout_height="@dimen/size_116">
+
+                <ImageView
+                    android:background="@drawable/icon_bottom_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/size_13"
+                    android:layout_width="@dimen/size_98"
+                    android:layout_height="@dimen/size_39" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46">
+
+        <TextView
+            android:id="@+id/tv_activity_upgrade_package_price"
+            android:background="@color/color_white"
+            android:text="补差价:¥--"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/size_10"
+            android:textColor="@color/color_font_black"
+            android:gravity="center_vertical|right"
+            android:textSize="@dimen/font_16"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        
+        <TextView
+            android:id="@+id/tv_activity_upgrade_package_pay"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16"
+            android:text="立即支付"
+            android:gravity="center"
+            android:background="@drawable/shape_create_dynamic_submit"
+            android:layout_width="@dimen/size_172"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

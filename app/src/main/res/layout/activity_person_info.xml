@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.PersonInfoActivity">
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14"
+        android:layout_height="@dimen/size_0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/size_50"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_72"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginBottom="@dimen/size_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="上传个人头像"
+                    android:textColor="@color/color_font_person_info"
+                    android:textSize="@dimen/font_14" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/size_72"
+                    android:layout_height="@dimen/size_72">
+
+                    <ImageView
+                        android:background="@drawable/shape_qrcode_select_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_add_picture"
+                        android:layout_width="@dimen/size_22"
+                        android:layout_height="@dimen/size_22" />
+
+                    <ImageView
+                        android:id="@+id/img_person_info_head"
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/size_72"
+                        android:layout_height="@dimen/size_72" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginBottom="@dimen/size_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="性别"
+                    android:textColor="@color/color_font_person_info"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rg_person_info_sex"
+                    android:layout_width="@dimen/size_100"
+                    android:layout_height="@dimen/size_30"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_person_info_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_sex"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="女"
+                        android:textColor="@color/selector_sex_font"
+                        android:textSize="@dimen/font_14" />
+
+                    <RadioButton
+                        android:id="@+id/rb_person_info_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_sex"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="男"
+                        android:textColor="@color/selector_sex_font"
+                        android:textSize="@dimen/font_14" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/PersonInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_20"
+                android:text="昵称" />
+
+            <EditText
+                android:id="@+id/edt_person_info_nickName"
+                style="@style/PersonInfoContent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:maxLength="10"
+                android:layout_marginBottom="@dimen/size_20"
+                android:hint="微信昵称" />
+
+            <TextView
+                style="@style/PersonInfoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_20"
+                android:text="年龄" />
+
+            <EditText
+                android:id="@+id/edt_person_info_age"
+                style="@style/PersonInfoContent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:inputType="number"
+                android:layout_marginBottom="@dimen/size_20"
+                android:hint="请输入年龄" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_person_info_submit"
+        android:background="@drawable/shape_create_dynamic_submit"
+        android:textColor="@color/color_white"
+        android:text="提交"
+        android:textSize="@dimen/font_16"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46" />
+
+</LinearLayout>

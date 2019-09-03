@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFF5F5F5"
+    android:layout_height="@dimen/size_73">
+
+    <ImageView
+        android:background="@drawable/icon_bottom_logo"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/size_112"
+        android:layout_height="@dimen/size_42" />
+
+</RelativeLayout>

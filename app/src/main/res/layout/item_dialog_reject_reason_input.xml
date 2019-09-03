@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/size_5"
+    android:id="@+id/ll_item_reject_reason_input"
+    android:paddingBottom="@dimen/size_5">
+
+    <RadioButton
+        android:id="@+id/rb_item_reject_reason_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/size_10" />
+
+    <TextView
+        style="@style/commonFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="其他，" />
+
+    <EditText
+        android:id="@+id/edt_item_reject_reason_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:hint="点击手动输入"
+        android:focusable="true"
+        android:maxLines="1"
+        android:textColorHint="@color/color_font_gray_lite"
+        android:textSize="@dimen/font_14" />
+
+</LinearLayout>

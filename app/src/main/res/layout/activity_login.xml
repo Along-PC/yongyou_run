@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/size_20"
+    android:paddingRight="@dimen/size_20"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    tools:context=".ui.activities.LoginActivity">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="@dimen/size_80"
+            android:background="@drawable/icon_login_back"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_activity_login_phone"
+                android:paddingLeft="@dimen/size_14"
+                android:hint="输入手机号"
+                android:textColorHint="#FFCCCCCC"
+                android:inputType="number"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_edit_border"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_47" />
+
+            <TextView
+                android:id="@+id/tv_activity_login_phone"
+                android:text="+86 >"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_14"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/size_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_47">
+
+            <EditText
+                android:id="@+id/edt_activity_login_code"
+                android:paddingLeft="@dimen/size_14"
+                android:hint="动态密码"
+                android:inputType="number"
+                android:textColorHint="#FFCCCCCC"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_edit_border"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:id="@+id/tv_activity_login_getCode"
+                android:text="获取动态密码"
+                android:textSize="@dimen/font_14"
+                android:textColor="#FF4A90E2"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/size_20"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/bt_activity_login"
+            android:textColor="@color/color_white"
+            android:text="手机快捷登录"
+            android:textSize="@dimen/font_16"
+            android:alpha="0.6"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_login_button"
+            android:layout_height="@dimen/size_46" />
+
+        <TextView
+            android:id="@+id/tv_activity_login_help"
+            android:text="还是无法登录？"
+            android:textSize="@dimen/font_12"
+            android:visibility="invisible"
+            android:textColor="@color/color_font_gray_lite"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

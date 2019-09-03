@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_92"
+    android:layout_marginTop="@dimen/size_2"
+    android:layout_marginLeft="@dimen/size_2"
+    android:layout_marginRight="@dimen/size_2"
+    android:layout_marginBottom="@dimen/size_10"
+    android:background="@drawable/shape_shadow"
+    android:translationZ="@dimen/size_2"
+    app:cardElevation="@dimen/size_2">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_search_battle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_item_search_battle_head"
+            android:layout_width="@dimen/size_72"
+            android:layout_height="@dimen/size_72"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_marginRight="@dimen/size_10" />
+
+        <TextView
+            android:id="@+id/tv_item_search_battle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_5"
+            android:layout_toRightOf="@+id/img_item_search_battle_head"
+            android:gravity="center_vertical"
+            android:text="闪电3k女神团"
+            android:textSize="@dimen/font_14" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_search_battle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_17"
+            android:layout_below="@+id/tv_item_search_battle_name"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_toRightOf="@+id/img_item_search_battle_head">
+
+            <TextView
+                android:id="@+id/tv_item_search_battle_position"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/size_24"
+                android:text="--"
+                android:textColor="@color/color_font_gray_lite"
+                android:textSize="@dimen/font_12" />
+
+            <View
+                android:layout_width="@dimen/size_1"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8"
+                android:layout_marginRight="@dimen/size_8"
+                android:background="#FFEEEEEE" />
+
+            <TextView
+                android:id="@+id/tv_item_search_battle_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/size_24"
+                android:text="-km"
+                android:textColor="@color/color_font_gray_lite"
+                android:textSize="@dimen/font_12" />
+
+            <View
+                android:layout_width="@dimen/size_1"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_8"
+                android:layout_marginRight="@dimen/size_8"
+                android:background="#FFEEEEEE" />
+
+            <TextView
+                android:id="@+id/tv_item_search_battle_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/size_24"
+                android:text="--人"
+                android:textColor="@color/color_font_gray_lite"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_search_battle_intro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_17"
+            android:layout_below="@+id/ll_item_search_battle"
+            android:layout_marginRight="@dimen/size_20"
+            android:layout_toRightOf="@+id/img_item_search_battle_head"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="队长：每周放风两天"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

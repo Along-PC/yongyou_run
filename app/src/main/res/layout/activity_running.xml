@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_activity_running_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1"
+    android:background="#FF333333"
+    tools:context=".ui.activities.punch.RunningActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_25">
+
+        <ImageView
+            android:id="@+id/img_activity_running_lock_status"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_16"
+            android:background="@drawable/selector_running_lock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="跑步中"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_activity_running_setting"
+            android:layout_width="@dimen/size_20"
+            android:layout_height="@dimen/size_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_16"
+            android:background="@drawable/icon_running_setting" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_activity_running_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_140"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_80"
+        android:gravity="center_vertical"
+        android:text="0.00"
+        android:textColor="@color/color_white"
+        android:textSize="120dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_activity_running_distance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_10"
+        android:text="km"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_14" />
+
+    <TextView
+        android:id="@+id/tv_activity_running_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_36"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_280"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="GPS"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_14" />
+
+    <ImageView
+        android:id="@+id/img_activity_running_map"
+        android:layout_width="@dimen/size_36"
+        android:layout_height="@dimen/size_36"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size_280"
+        android:layout_marginRight="@dimen/size_40"
+        android:background="@drawable/icon_run_location" />
+
+    <LinearLayout
+        android:id="@+id/ll_activity_running_status"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_25"
+        android:layout_below="@+id/tv_activity_running_distance"
+        android:layout_marginTop="@dimen/size_150">
+
+        <TextView
+            android:id="@+id/tv_activity_running_speed"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0’00”"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_18" />
+
+        <TextView
+            android:id="@+id/tv_activity_running_time"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00：00：00"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_20"
+        android:layout_below="@+id/ll_activity_running_status"
+        android:layout_marginTop="@dimen/size_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="配速"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="用时"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_activity_running_operate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_88"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_58">
+
+        <RelativeLayout
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_activity_running_resume"
+                android:layout_width="@dimen/size_88"
+                android:layout_height="@dimen/size_88"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_running_resume" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.tourye.run.views.EndView
+                android:id="@+id/img_activity_running_exit"
+                android:layout_width="@dimen/size_88"
+                android:layout_height="@dimen/size_88"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_activity_running_start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/size_46"
+        android:background="@drawable/selector_running_status"
+        android:layout_width="@dimen/size_144"
+        android:layout_height="@dimen/size_144" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_running_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_100"
+        android:visibility="gone">
+
+        <com.tourye.run.views.SlideLockView
+            android:id="@+id/slide_activity_running"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/shape_lock_back">
+
+            <ImageView
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_lock_locked" />
+
+        </com.tourye.run.views.SlideLockView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="滑动解锁"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_running_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF333333"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_activity_running_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="3"
+            android:textColor="#FFFFFFFF"
+            android:textSize="200sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

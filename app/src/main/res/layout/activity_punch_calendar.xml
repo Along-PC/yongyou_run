@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F5F5"
+    android:orientation="vertical"
+    tools:context=".ui.activities.mine.PunchCalendarActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_66"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/img_activity_punch_calendar_head"
+            android:layout_width="@dimen/size_48"
+            android:layout_height="@dimen/size_48"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_marginRight="@dimen/size_6"
+            android:background="@drawable/icon_head" />
+
+        <TextView
+            android:id="@+id/tv_activity_punch_calendar_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_toLeftOf="@+id/tv_activity_punch_calendar_date"
+            android:layout_toRightOf="@+id/img_activity_punch_calendar_head"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="- -"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_punch_calendar_insist"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_below="@+id/tv_activity_punch_calendar_name"
+            android:layout_toRightOf="@+id/img_activity_punch_calendar_head"
+            android:gravity="center_vertical"
+            android:text="已坚持-天"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_activity_punch_calendar_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_14"
+            android:gravity="center"
+            android:text="日期"
+            android:textColor="#FF4A90E2"
+            android:textSize="@dimen/font_14" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30"
+        android:background="#FFFAFAFA">
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="日"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="三"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="四"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="五"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:layout_width="@dimen/size_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="六"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+    </LinearLayout>
+
+    <com.necer.calendar.MonthCalendar
+        android:id="@+id/datepicker_activity_punch_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_57"
+        android:background="#FFFAFAFA"
+        android:paddingTop="@dimen/size_20"
+        android:paddingBottom="@dimen/size_20">
+
+        <ImageView
+            android:layout_width="@dimen/size_6"
+            android:layout_height="@dimen/size_6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_marginRight="@dimen/size_4"
+            android:background="@drawable/shape_calendar_point_pass" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:text="打卡成功"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <ImageView
+            android:layout_width="@dimen/size_6"
+            android:layout_height="@dimen/size_6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_4"
+            android:background="@drawable/shape_calendar_point_nopass" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:text="审核未通过"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <ImageView
+            android:layout_width="@dimen/size_6"
+            android:layout_height="@dimen/size_6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_4"
+            android:background="@drawable/shape_calendar_point_current" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:text="当前日期"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_37">
+
+        <TextView
+            android:id="@+id/tv_activity_punch_calendar_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_14"
+            android:layout_weight="1"
+            android:text="未来--天需打卡--天"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_punch_calendar_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size_14"
+            android:text="累计打卡--km"
+            android:textColor="@color/color_font_black"
+            android:textSize="@dimen/font_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_activity_punch_calendar_status"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_91"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45">
+
+            <TextView
+                android:id="@+id/tv_activity_punch_calendar_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_14"
+                android:layout_weight="1"
+                android:text="今日未打卡"
+                android:textColor="@color/color_font_black"
+                android:textSize="@dimen/font_14" />
+
+            <LinearLayout
+                android:id="@+id/ll_activity_punch_calendar_call"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="联系Ta"
+                    android:textColor="@color/color_font_black"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_24"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/size_14"
+                    android:background="@drawable/icon_phone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tv_activity_punch_calendar_nopass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size_14"
+            android:text="审核未通过"
+            android:textColor="#FFFF1D1D"
+            android:textSize="@dimen/font_14"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>

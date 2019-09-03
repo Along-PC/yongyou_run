@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_67">
+
+    <ImageView
+        android:id="@+id/img_item_team_member_head"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_centerVertical="true"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48" />
+
+    <TextView
+        android:id="@+id/tv_item_team_member_name"
+        android:text="--"
+        android:textSize="@dimen/font_15"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/img_item_team_member_head"
+        android:ellipsize="end"
+        android:layout_toLeftOf="@+id/tv_item_team_member_state"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size_10"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:textColor="@color/color_font_black"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_item_team_member_state"
+        android:text="未打卡"
+        android:textSize="@dimen/font_15"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size_14"
+        android:textColor="@color/color_font_black"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="#EAEAEA"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+</RelativeLayout>

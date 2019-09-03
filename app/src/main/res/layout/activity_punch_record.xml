@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    tools:context=".ui.activities.punch.PunchRecordActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_punch_date"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_20"
+        android:background="@drawable/shape_punch_record_calendar">
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_punch_record_last"
+            android:layout_marginLeft="@dimen/size_5"
+            android:layout_gravity="center_vertical"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30">
+
+            <ImageView
+                android:id="@+id/img_activity_punch_record_last"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_triangle_left" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_activity_punch_record_current"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="----年--月"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_punch_record_next"
+            android:layout_marginRight="@dimen/size_5"
+            android:layout_width="@dimen/size_30"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/size_30">
+
+            <ImageView
+                android:id="@+id/img_activity_punch_record_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_triangle_right" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_activity_punch_record"
+        android:visibility="gone"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_punch_record_noContent"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_280">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_76"
+            android:background="@drawable/icon_no_check"
+            android:layout_width="@dimen/size_75"
+            android:layout_height="@dimen/size_130" />
+
+        <TextView
+            android:text="当前没有打卡记录"
+            android:textSize="@dimen/font_14"
+            android:layout_marginBottom="@dimen/size_30"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/color_font_gray_lite"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

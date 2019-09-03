@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--启动页主题-->
+    <style name="MainTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/icon_splash</item>
+    </style>
+
+    <style name="commonFont">
+        <item name="android:textColor">@color/color_font_black</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="blackFont">
+        <item name="android:textColor">@color/color_font_black_weight</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="smallFont">
+        <item name="android:textColor">@color/color_font_black</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="runningGroupApplyTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_font_black_weight</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/size_10</item>
+        <item name="android:layout_marginBottom">@dimen/size_4</item>
+    </style>
+
+    <!--修改头像弹框-->
+    <style name="HeadDialogStyle">
+
+        <item name="android:windowEnterAnimation">@anim/head_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/head_dialog_out</item>
+
+    </style>
+
+    <style name="BottomDialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="GameTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="PersonInfoTitle">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_font_person_info</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/size_4</item>
+    </style>
+
+    <style name="PersonInfoContent">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/color_font_person_info</item>
+        <item name="android:textColorHint">@color/color_font_person_info_hint</item>
+        <item name="android:background">@drawable/shape_person_info_edit</item>
+        <item name="android:paddingLeft">@dimen/size_12</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AppTheme.Transparent" parent="AppTheme">
+        <!-- Style for the second activity -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_item_battle_report"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_70">
+    
+    <TextView
+        android:id="@+id/tv_item_battle_report_intro"
+        android:text="- - - - - -"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginBottom="@dimen/size_10"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14"
+        android:textSize="@dimen/font_14"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/color_font_black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_20" />
+
+    <TextView
+        android:id="@+id/tv_item_battle_report_time"
+        android:text="- - -"
+        android:textSize="@dimen/font_14"
+        android:paddingLeft="@dimen/size_14"
+        android:paddingRight="@dimen/size_14"
+        android:textColor="@color/color_font_gray"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_20" />
+
+    <View
+        android:layout_marginTop="@dimen/size_9"
+        android:background="#FFEFEFF4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"/>
+
+</LinearLayout>

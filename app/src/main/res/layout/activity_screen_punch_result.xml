@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.punch.ScreenPunchResultActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <ImageView
+            android:layout_width="@dimen/size_60"
+            android:layout_height="@dimen/size_60"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_10"
+            android:background="@drawable/icon_punch_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_22"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_6"
+            android:gravity="center_vertical"
+            android:text="上传打卡成功"
+            android:textColor="@color/color_font_black_weight"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_activity_screen_punch_result_return"
+            android:layout_width="@dimen/size_159"
+            android:layout_height="@dimen/size_283"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_6" />
+
+        <TextView
+            android:id="@+id/tv_activity_screen_punch_result_return"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_20"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_20"
+            android:gravity="center_vertical"
+            android:text="长按图片可以保存到相册，发朋友圈"
+            android:textColor="@color/color_font_black_weight"
+            android:textSize="@dimen/font_14" />
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_screen_punch_result_check"
+            android:layout_width="@dimen/size_187"
+            android:layout_height="@dimen/size_54"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/size_10">
+
+            <TextView
+                android:id="@+id/tv_activity_screen_punch_result_check"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginTop="@dimen/size_10"
+                android:background="@drawable/shape_punch_result_border"
+                android:gravity="center"
+                android:text="去审核打卡"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_activity_screen_punch_result_checkNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_punch_result_block"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/size_6"
+                android:layout_marginRight="@dimen/size_2"
+                android:text="- -"
+                android:textSize="@dimen/font_14" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_activity_screen_punch_result_dynamic"
+            android:layout_width="@dimen/size_187"
+            android:layout_height="@dimen/size_44"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_10"
+            android:background="@drawable/shape_punch_result_border"
+            android:gravity="center"
+            android:text="去发动态"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

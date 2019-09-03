@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_62"
+    android:layout_height="@dimen/size_32">
+
+    <TextView
+        android:id="@+id/tv_item_activity_shipping_address"
+        android:text="--"
+        android:textColor="@color/selector_shipping_address"
+        android:gravity="center"
+        android:background="@drawable/selector_shipping_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</android.support.constraint.ConstraintLayout>

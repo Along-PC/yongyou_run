@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/size_15"
+    android:paddingRight="@dimen/size_15"
+    android:orientation="vertical"
+    android:background="#FFF5F5F5"
+    tools:context=".ui.activities.community.CommentActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_20"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_comment_content"
+        android:layout_height="@dimen/size_195">
+
+        <EditText
+            android:id="@+id/edt_activity_comment_reply"
+            android:hint="写评论..."
+            android:gravity="start"
+            android:maxLength="140"
+            android:textColorHint="#FFCCCCCC"
+            android:textColor="@color/color_font_black"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_marginRight="@dimen/size_15"
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_marginBottom="@dimen/size_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_activity_comment_count"
+            android:text="0/140"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_activity_comment_submit"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_18"
+        android:background="@drawable/shape_comment_submit"
+        android:gravity="center"
+        android:text="发送"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_44" />
+
+</LinearLayout>

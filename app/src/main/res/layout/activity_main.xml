@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    tools:context=".ui.activities.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_49"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_activity_main_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_activity_main_signup"
+                android:layout_width="@dimen/size_22"
+                android:layout_height="@dimen/size_22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@drawable/selector_navi_signup" />
+
+            <TextView
+                android:id="@+id/tv_activity_main_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_17"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="报名"
+                android:textColor="@color/selector_activity_main_navi"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_activity_main_punch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_activity_main_punch"
+                android:layout_width="@dimen/size_22"
+                android:layout_height="@dimen/size_22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@drawable/selector_navi_punch" />
+
+            <TextView
+                android:id="@+id/tv_activity_main_punch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_17"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="打卡"
+                android:textColor="@color/selector_activity_main_navi"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_activity_main_find"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_activity_main_find"
+                android:layout_width="@dimen/size_22"
+                android:layout_height="@dimen/size_22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@drawable/selector_navi_community" />
+
+            <TextView
+                android:id="@+id/tv_activity_main_find"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_17"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="发现"
+                android:textColor="@color/selector_activity_main_navi"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_activity_main_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_activity_main_mine"
+                android:layout_width="@dimen/size_22"
+                android:layout_height="@dimen/size_22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_5"
+                android:background="@drawable/selector_navi_mine" />
+
+            <TextView
+                android:id="@+id/tv_activity_main_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_17"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/selector_activity_main_navi"
+                android:textSize="@dimen/font_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
